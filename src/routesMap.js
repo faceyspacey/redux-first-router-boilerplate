@@ -21,6 +21,9 @@ export default {
   }
 }
 
+// this is essentially faking/mocking the fetch api
+// pretend this actually requested data over the network
+
 const fetch = async path => {
   const category = path.replace('/api/category/', '')
 
@@ -38,7 +41,3 @@ const fetch = async path => {
   }
 }
 
-const fakeDelay = () =>
-  new Promise((resolve, reject) => {
-    setTimeout(resolve, 1000)
-  })
