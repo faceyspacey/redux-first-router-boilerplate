@@ -13,7 +13,8 @@ export default {
           type: 'LIST',
           payload: { category: 'redux' }
         })
-        dispatch(action)
+
+        return dispatch(action)
       }
 
       dispatch({ type: 'PACKAGES_FETCHED', payload: { category, packages } })
