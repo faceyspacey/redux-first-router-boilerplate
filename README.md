@@ -7,6 +7,8 @@
 
 
 ![redux-first-router-demo screenshot](./screenshot.png)
+> For a demo/boilerplate that goes even farther make sure to check out the **["DEMO"](https://github.com/faceyspacey/redux-first-router-demo)**. A lot more features and use-cases are covered there, but this *boilerplate* is the best place to start to learn the basics of RFR, especially if you're new to any of these things: SSR, Code Splitting, Express, APIs, Webpack and Redux in general.
+
 
 ## Installation
 
@@ -29,7 +31,7 @@ yarn start
 
 *server code:*
 - [***server/index.js***](./server/index.js)
-- [***server/render.js***](./server/render.js) - *(super simple thanks to [webpack-flush-chunks](https://github.com/faceyspacey/webpack-flush-chunks))*
+- [***server/render.js***](./server/render.js) - *(super simple thanks to [webpack-flush-chunks](https://github.com/faceyspacey/webpack-flush-chunks) from our ***"Universal"*** product line)*
 - [***server/configureStore.js***](./server/configureStore.js) - ***(observe how the matched route's thunk is awaited on)***
 
 
