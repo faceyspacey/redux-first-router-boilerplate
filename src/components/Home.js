@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../css/Home'
+import ArticlePromotion from './ArticlePromotion'
 
 const Home = () =>
   <div className={styles.home}>
@@ -13,16 +14,22 @@ const Home = () =>
       />
       <span className={styles.caption}>RFR will become Rudy</span>
 
-      <div className={styles.more}>Wanna master SSR? Read:</div>
-      <a
-        className={styles.link}
-        href='https://medium.com/faceyspacey/server-render-like-a-pro-w-redux-first-router-in-10-steps-b27dd93859de'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        Server-Render Like a Pro in 10 Steps /w Redux-First Router 🚀
-      </a>
+      <ArticlePromotion
+        title='Wanna master SSR? Read:'
+        text='Server-Render Like a Pro in 10 Steps /w Redux-First Router 🚀'
+        url='https://medium.com/faceyspacey/server-render-like-a-pro-w-redux-first-router-in-10-steps-b27dd93859de'
+      />
     </div>
+
+    <a
+      className={styles.nico}
+      href='https://twitter.com/nico__delfino'
+      target='_blank'
+      rel='noopener noreferrer'
+    >
+      *One of our first users, Nicolas Delfino, designed the logo, check him
+      out: @nico__delfino
+    </a>
   </div>
 
 export default Home
