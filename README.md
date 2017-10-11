@@ -34,4 +34,8 @@ yarn start
 - [***server/render.js***](./server/render.js) - *(super simple thanks to [webpack-flush-chunks](https://github.com/faceyspacey/webpack-flush-chunks) from our ***"Universal"*** product line)*
 - [***server/configureStore.js***](./server/configureStore.js) - ***(observe how the matched route's thunk is awaited on)***
 
+## Warning about Unicode
+
+It's worth checking your JSON for unicode, especially if you are constantly seeing red screens of death after refreshing the browser. Unicode will break the initial state object loaded into the dom by the server rendering.
+
 
