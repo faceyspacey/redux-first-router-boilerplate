@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -12,7 +14,7 @@ const { store } = configureStore(history, window.REDUX_STATE)
 const render = App => {
   const root = document.getElementById('root')
 
-  ReactDOM.render(
+  ReactDOM.hydrate(
     <AppContainer>
       <Provider store={store}>
         <App />
@@ -27,6 +29,7 @@ render(App)
 if (module.hot && process.env.NODE_ENV === 'development') {
   module.hot.accept('./components/App', () => {
     const App = require('./components/App').default
+
     render(App)
   })
 }
