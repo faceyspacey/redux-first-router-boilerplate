@@ -66,7 +66,7 @@ module.exports = {
     'import/no-named-default': 1,
     'no-unused-vars': 1,
     'flowtype/no-weak-types': 1,
-    'consistent-return': 1,
+    'consistent-return': 0,
     'import/prefer-default-export': 1,
     'no-console': 1,
     'jsx-a11y/no-static-element-interactions': 1,

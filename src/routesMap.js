@@ -2,6 +2,7 @@ import { redirect } from 'redux-first-router'
 
 export default {
   HOME: '/',
+
   LIST: {
     path: '/list/:category',
     thunk: async (dispatch, getState) => {
@@ -41,4 +42,3 @@ const fetch = async path => {
       return []
   }
 }
-
