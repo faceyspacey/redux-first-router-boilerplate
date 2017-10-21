@@ -51,6 +51,8 @@ module.exports = {
     'no-use-before-define': 0,
     'no-param-reassign': 0,
     'react/prop-types': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
     'react/no-render-return-value': 0,
     'no-confusing-arrow': 0,
     'no-underscore-dangle': 0,
