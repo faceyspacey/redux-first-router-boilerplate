@@ -5,7 +5,7 @@ import universal from 'react-universal-component'
 import styles from '../css/Switcher'
 
 const UniversalComponent = universal(({ page }) => import(`./${page}`), {
-  minDelay: 1000,
+  minDelay: 500,
 
   loading: () => (
     <div className={styles.spinner}>
