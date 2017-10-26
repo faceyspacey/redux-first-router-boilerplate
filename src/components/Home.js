@@ -1,17 +1,20 @@
 import React from 'react'
-import styles from '../css/Home'
+
 import ArticlePromotion from './ArticlePromotion'
 
-const Home = () =>
+import styles from '../css/Home'
+
+const Home = () => (
   <div className={styles.home}>
     <h1 className={styles.title}>HOME</h1>
 
     <div className={styles.content}>
       <img
-        src='https://cdn.reactlandia.com/rudy-logo.png'
         alt='logo'
         style={{ height: 300 }}
+        src='https://cdn.reactlandia.com/rudy-logo.png'
       />
+
       <span className={styles.caption}>RFR will become Rudy</span>
 
       <ArticlePromotion
@@ -22,14 +25,15 @@ const Home = () =>
     </div>
 
     <a
-      className={styles.nico}
-      href='https://twitter.com/nico__delfino'
       target='_blank'
+      className={styles.nico}
       rel='noopener noreferrer'
+      href='https://twitter.com/nico__delfino'
     >
       *One of our first users, Nicolas Delfino, designed the logo, check him
       out: @nico__delfino
     </a>
   </div>
+)
 
 export default Home
