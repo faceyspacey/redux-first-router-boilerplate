@@ -12,7 +12,8 @@ export default ({ clientStats }) => async (req, res, next) => {
 
   const app = createApp(App, store)
   const appString = ReactDOM.renderToString(app)
-  const stateJson = JSON.stringify(store.getState())
+  const state = store.getState()
+  const stateJson = JSON.stringify(state)
   const chunkNames = flushChunkNames()
   const { js, styles, cssHash } = flushChunks(clientStats, { chunkNames })
 
@@ -24,7 +25,7 @@ export default ({ clientStats }) => async (req, res, next) => {
       <html>
         <head>
           <meta charset="utf-8">
-          <title>redux-first-router-boilerplate</title>
+          <title>${state.title}</title>
           ${styles}
         </head>
         <body>
