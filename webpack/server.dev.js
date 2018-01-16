@@ -26,7 +26,7 @@ module.exports = {
   target: 'node',
   // devtool: 'source-map',
   devtool: 'eval',
-  entry: ['babel-polyfill', res('../server/render.js')],
+  entry: ['babel-polyfill', res('../server/renderDev.js')],
   externals,
   output: {
     path: res('../buildServer'),
