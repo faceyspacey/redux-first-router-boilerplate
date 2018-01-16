@@ -68,23 +68,23 @@ module.exports = {
       sourceMap: true
     }),
     new webpack.HashedModuleIdsPlugin(), // not needed for strategy to work (just good practice)
-    new AutoDllPlugin({
-      context: path.join(__dirname, '..'),
-      filename: '[name].js',
-      entry: {
-        vendor: [
-          'react',
-          'react-dom',
-          'react-redux',
-          'redux',
-          'history/createBrowserHistory',
-          'transition-group',
-          'redux-first-router',
-          'redux-first-router-link',
-          'babel-polyfill',
-          'redux-devtools-extension/logOnlyInProduction'
-        ]
-      }
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ["app", "vendor"],
+			minChunks: 2
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        screw_ie8: true,
+        warnings: false
+      },
+      mangle: {
+        screw_ie8: true
+      },
+      output: {
+        screw_ie8: true,
+        comments: false
+      },
+      sourceMap: true
     })
   ]
 }
