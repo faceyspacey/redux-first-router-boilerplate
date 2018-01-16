@@ -25,7 +25,7 @@ module.exports = {
   name: 'server',
   target: 'node',
   devtool: 'source-map',
-  entry: [res('../server/render.js')],
+  entry: [res('../server/renderProd.js')],
   externals,
   output: {
     path: res('../buildServer'),
